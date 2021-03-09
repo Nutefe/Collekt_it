@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_recuperation"
+        android:icon="@drawable/ic_baseline_restore_24"
+        android:title="@string/title_recuperation" />
+
+    <item
+        android:id="@+id/navigation_auth"
+        android:icon="@drawable/ic_baseline_brightness_auto_24"
+        android:title="@string/title_autorisation" />
+
+    <item
+        android:id="@+id/navigation_profil"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/title_profil" />
+
+</menu>

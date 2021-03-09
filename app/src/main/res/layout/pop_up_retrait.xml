@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_info_cycle"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:textAlignment="viewStart"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_somme_collecte_cy"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:textAlignment="viewEnd"
+                android:id="@+id/sommeCRetrait"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="2.5"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_somme_mise_retrait"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:textAlignment="viewEnd"
+                android:id="@+id/sommeMiseRetrait"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_montant_retrait"
+                android:textColor="@android:color/black"
+                />
+
+            <TextView
+                android:textAlignment="viewEnd"
+                android:id="@+id/montantRetrait"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

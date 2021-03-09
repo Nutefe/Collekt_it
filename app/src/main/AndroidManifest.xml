@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.perfekxia.collekt_it">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon3"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyAppTheme">
+        <activity
+            android:name=".ui.screen.SplashScreenActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.changePassword.PasswordActivity" />
+        <activity android:name=".ui.listeCollectes.ListeCollecteActivity" />
+        <activity android:name=".ui.effectuerCollecte.EffectuerCollecteActivity"/>
+        <activity android:name=".ui.confirmerCollecte.ConfirmerCollecteActivity"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/MyAppTheme"/>
+        <activity android:name=".ui.configuration.WelcomeActivity"
+            android:theme="@style/MyAppTheme"/>
+        <activity android:name=".ui.login.LoginActivity"/>
+        <activity android:name=".ui.clientsVisites.ClientsVisitesActivity"/>
+        <activity android:name=".ui.listeClients.ListeClientsActivity"/>
+        <activity android:name=".ui.imprimer.ImprimerActivity"/>
+        <activity android:name=".ui.creerCycle.CreerCycleActivity"/>
+        <activity android:name=".ui.listeCycles.ListeCyclesActivity"/>
+
+        <activity android:name=".ui.listescomptespourretraits.ListeComptesRetraitsActivity"/>
+        <activity android:name=".ui.effectuerRetrait.EffectuerRetraitActivity"/>
+
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon1" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+    </application>
+
+</manifest>

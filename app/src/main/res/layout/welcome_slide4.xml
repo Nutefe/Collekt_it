@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/customLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/adminLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/txtError1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Information de l'Admin"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="17dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_ac_identification"
+                        android:textColor="@android:color/black"
+                        android:textSize="17dp"/>
+
+                    <TextView
+                        android:id="@+id/identifiantAc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="AC0010"
+                        android:layout_weight="2.5"
+                        android:textSize="17dp"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_ac_name"
+                        android:textColor="@android:color/black"
+                        android:textSize="17dp"/>
+
+                    <TextView
+                        android:id="@+id/nomComplet"
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="wrap_content"
+                        android:text="KOKOU Gratitude"
+                        android:textSize="17dp"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_ac_first_name"
+                        android:textColor="@android:color/black"
+                        android:textSize="17dp"/>
+
+                    <TextView
+                        android:id="@+id/prenomAc"
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="wrap_content"
+                        android:text="Flita Djibe"
+                        android:textSize="17dp"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorSilve" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Interval de date de cycle"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/dateTextDebut"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date de début"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:inputType="date"
+                            android:textColor="@android:color/black"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/dateTextFin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date de fin"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:inputType="date"
+                            android:textColor="@android:color/black"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_select_zones"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="17dp"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/spinner"
+                        android:spinnerMode="dropdown"
+                        style="@style/spinner_style"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:textColorHint="@android:color/black"
+                    android:hint="@string/txt_pin"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pinField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textSize="@dimen/activity_vertical_margin"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnValideAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/buttom_valide"
+                    android:background="@drawable/button_shape"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/simpleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="250dp">
+
+                <TextView
+                    android:id="@+id/txtError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="150dp"/>
+
+                <Button
+                    android:id="@+id/okBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_auth_btn_size"
+                    android:layout_marginRight="@dimen/margin_auth_btn_size"
+                    android:text="@string/buttom_authorization"
+                    android:background="@drawable/button_shape"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

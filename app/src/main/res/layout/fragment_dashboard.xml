@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dashboard.DashboardFragment"
+    android:background="@color/white"
+    android:id="@+id/contener">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <!--    -->
+            <!--    <ProgressBar-->
+            <!--        android:id="@+id/progressBar"-->
+            <!--        android:layout_width="50dp"-->
+            <!--        android:layout_height="50dp"-->
+            <!--        android:layout_marginTop="10dp"-->
+            <!--        android:visibility="gone"/>-->
+
+            <TextView android:gravity="center" android:layout_marginTop="5dp"  android:id="@+id/errorTextSynchronisation" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="" android:textSize="18dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdCollectes"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:text="Transactions de la journée"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/lightgray"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:id="@+id/nombreDeCollectes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:padding="1dp"
+                        android:textColor="@color/blue"/>
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/diag1"
+                        android:padding="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4">
+                <androidx.cardview.widget.CardView
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/cltListe"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="1dp"
+                            android:textSize="20dp"
+                            android:text="Clients"/>
+                        <TextView
+                            android:id="@+id/nombreClient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="35dp"
+                            android:gravity="center"
+                            android:text=""
+                            android:padding="5dp"
+                            android:textColor="@color/blue"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="Le nombre de clients dans votre zone"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cltVisites"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="1dp"
+                            android:textSize="20dp"
+                            android:text="Clients visités"/>
+                        <TextView
+                            android:id="@+id/nombreCltVisites"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="35dp"
+                            android:gravity="center"
+                            android:text=""
+                            android:padding="5dp"
+                            android:textColor="@color/blue"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="Le nombre de clients visités dans la journée"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/syncDonnees"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/colorBorder"
+                android:textColor="#fff"
+                android:layout_marginTop="85dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_synchro"/>
+            <Button
+                android:id="@+id/syncDonneesDonne"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/colorBorder"
+                android:textColor="#fff"
+                android:layout_marginTop="85dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_synchro"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/effectuerRetrait"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/blue"
+                android:textColor="#fff"
+                android:layout_marginTop="85dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Effectuer retrait"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/listeEquipements"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/blue"
+                android:textColor="#fff"
+                android:layout_marginTop="85dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Liste equipements"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.creerCycle.CreerCycleActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="#fff"
+            android:gravity="center"
+            android:id="@+id/cltAccountCreerCycle"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text=""
+            android:textSize="25dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Montant de la mise : "
+                android:textSize="25dp"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:gravity="left"
+                android:id="@+id/montantMiseCreerCycle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:textSize="25dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Montant de la collecte : "
+                android:textSize="25dp"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:gravity="left"
+                android:id="@+id/montantCollecteCreerCycle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:textSize="25dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llCreerCycle"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/errorText"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text=""
+            android:textSize="18dp"/>
+        <EditText
+            android:focusable="false"
+            android:enabled="false"
+            android:layout_marginTop="5dp"
+            android:id="@+id/dateDebut"
+            android:hint="Date debut"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="text"/>
+        <EditText
+            android:focusable="false"
+            android:enabled="false"
+            android:layout_marginTop="5dp"
+            android:id="@+id/dateFin"
+            android:hint="Date fin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="text"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/montantMiseCycle"
+            android:hint="Montant de la mise"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="phone"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/montantCollecteCycle"
+            android:hint="Montant de la collecte"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="phone"/>
+        <Button
+            android:id="@+id/validerCycle"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/blue"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="valider"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
